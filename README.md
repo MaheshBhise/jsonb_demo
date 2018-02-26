@@ -5,6 +5,7 @@
 * Ruby version: 2.3.1
 
 * Setup
+  * change the config/database.yml file as per your database settings.
   * rake db:create db:migrate db:seed
 
 
@@ -15,5 +16,5 @@
   * http://localhost:3000/home_loans.json
 
 * Example query on jsonb data column with nesting
-   * rails c
-   * HomeLoan.data_contains(rate_type: "fixed", preference: { flexible: true })
+   * On terminal hit `rails console` and play with seeded data 
+    * HomeLoan.data_contains(rate_type: "fixed", preference: { flexible: true })

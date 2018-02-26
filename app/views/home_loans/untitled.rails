@@ -1,0 +1,86 @@
+<p><strong>Data:</strong><%= @home_loan.data %></p>
+
+<div class="field">
+    <%= f.label :id><br>
+    <%= f.text_field :id %></p> 
+</div>
+
+<div class="field">
+    <%= f.label :data %><br>
+    <%= f.text_field :data %></p> 
+</div>
+
+<div class="field">
+    <%= f.label :loan_type %><br>
+    <%= f.text_field :loan_type %></p>
+</div>
+
+<div class="field">
+    <%= f.label :loan_purpose %><br>
+    <%= f.text_field :loan_purpose %></p>
+</div>
+
+<div class="field">
+    <%= f.label :loan_amount %><br>
+    <%= f.text_field :loan_amount %></p>
+</div>
+
+<div class="field">
+    <%= f.label :interest_rate %><br>
+    <%= f.text_field :interest_rate %></p>
+</div>
+
+<div class="field">
+    <%= f.label :property_market_value %><br>
+    <%= f.text_field :property_market_value %></p>
+</div>
+
+<div class="field">
+    <%= f.label :rate_type %><br>
+    <%= f.text_field :rate_type %></p>
+</div>
+
+<div class="field">
+    <%= f.label :retention %><br>
+    <%= f.text_field :retention %></p>
+</div>
+
+
+<div class="field">
+    <%= f.label :preference %><br>
+    <%= f.text_field :preference.big_four_banks %></p>     
+</div>
+
+<div class="field">
+    <%= f.label :preference %><br>
+    <%= f.text_field :preference.online_banks %></p>       
+</div>
+
+<div class="field">
+    <%= f.label :preference %><br>
+    <%= f.text_field :preference.flexible %></p>            
+</div>
+
+<div class="field">
+    <%= f.label :preference %><br>
+    <%= f.text_field :preference.interest_only_period %></p>
+</div>
+
+<div class="field">
+    <%= f.label :preference %><br>
+    <%= f.text_field :preference.is_restrict %></p>
+</div>
+
+
+<div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.text_field :created_at %></p> 
+</div>
+
+<div class="field">
+    <%= f.label :updated_at %><br>
+    <%= f.text_field :updated_at %></p>
+</div>
+
+
+

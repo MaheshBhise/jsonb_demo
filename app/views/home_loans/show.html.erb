@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+
+<p><strong>Id:</strong><%= @home_loan.id %></p> 
+<p><strong>Data:</strong><%= @home_loan.data %></p> 
+<p><strong>Loan Type:</strong><%= @home_loan.loan_type %></p>
+<p><strong>Purpose:</strong><%= @home_loan.loan_purpose %></p>
+<p><strong>Amount:</strong><%= @home_loan.loan_amount %></p>
+<p><strong>Interest Rate:</strong><%= @home_loan.interest_rate %></p>
+<p><strong>Property Value:</strong><%= @home_loan.property_market_value %></p>
+<p><strong>Rate Type:</strong><%= @home_loan.rate_type %></p>
+<p><strong>Retention:</strong><%= @home_loan.retention %></p>
+
+<p><strong>Big Four Banks:</strong><%= @home_loan.preference.big_four_banks %></p>     
+<p><strong>Online banks:</strong><%= @home_loan.preference.online_banks %></p>       
+<p><strong>Flexible:</strong><%= @home_loan.preference.flexible %></p>            
+<p><strong>Interest only Period:</strong><%= @home_loan.preference.interest_only_period %></p>
+<p><strong>Is Restrict:</strong><%= @home_loan.preference.is_restrict %></p>
+
+<p><strong>Create at:</strong><%= @home_loan.created_at %></p> 
+<p><strong>Updated at:</strong><%= @home_loan.updated_at %></p>
+  
+
+
+<%= link_to 'Edit', edit_home_loan_path(@home_loan) %> |
+<%= link_to 'Back', home_loans_path %>

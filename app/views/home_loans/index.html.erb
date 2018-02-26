@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Home Loans</h1>
+
+<table border='1'>
+  <thead>
+    <tr>
+      <th>Loan Type</th>
+      <th>Loan Purpose</th>
+      <th>Loan Amount</th>
+      <th>Interest Rate</th>
+      <th>Property Value</th>
+      <th>Rate Type</th>
+      <th>Retention</th>
+
+      <th>Big Four Banks</th>
+      <th>online Banks</th>
+      <th>Flexible</th>
+      <th>Period</th>
+      <th>Is restrict</th>
+
+      <th>Created at</th>
+
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @home_loans.each do |home_loan| %>
+      <tr>
+        <td><%= home_loan.loan_type %></td>
+        <td><%= home_loan.loan_purpose %></td>
+        <td><%= home_loan.loan_amount %></td>
+        <td><%= home_loan.interest_rate %></td>
+        <td><%= home_loan.property_market_value %></td>
+        <td><%= home_loan.rate_type %></td>
+        <td><%= home_loan.retention %></td>
+
+        <td><%= home_loan.preference.big_four_banks %>     
+        <td><%= home_loan.preference.online_banks %>       
+        <td><%= home_loan.preference.flexible %>            
+        <td><%= home_loan.preference.interest_only_period %>
+        <td><%= home_loan.preference.is_restrict %>
+
+        <td><%= home_loan.created_at %></td>
+
+        <td><%= link_to 'Show', home_loan %></td>
+        <td><%= link_to 'Edit', edit_home_loan_path(home_loan) %></td>
+        <td><%= link_to 'Destroy', home_loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Home loan', new_home_loan_path %>

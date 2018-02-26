@@ -1,0 +1,79 @@
+<%= form_for(@home_loan) do |f| %>
+  <% if @home_loan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@home_loan.errors.count, "error") %> prohibited this home_loan from being saved:</h2>
+
+      <ul>
+      <% @home_loan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+      <%= f.label :loan_type %><br>
+      <%= f.select :loan_type, ['new loan', 'refinance']%></p>
+  </div>
+
+  <div class="field">
+      <%= f.label :loan_purpose %><br>
+      <%= f.select :loan_purpose, ['investment', 'owner'] %></p>
+  </div>
+
+  <div class="field">
+      <%= f.label :loan_amount %><br>
+      <%= f.number_field :loan_amount %></p>
+  </div>
+
+  <div class="field">
+      <%= f.label :interest_rate %><br>
+      <%= f.number_field :interest_rate %></p>
+  </div>
+
+  <div class="field">
+      <%= f.label :property_market_value %><br>
+      <%= f.number_field :property_market_value %></p>
+  </div>
+
+  <div class="field">
+      <%= f.label :rate_type %><br>
+      <%= f.select :rate_type, ['fixed', 'variable'] %></p>
+  </div>
+
+  <div class="field">
+      <%= f.label :retention %><br>
+      <%= f.text_field :retention %></p>
+  </div>
+
+    <h3> Preferences</h3>
+    <div class="field">
+        <%= label_tag :big_four_banks %><br>
+        <%= select_tag 'home_loan[preference][big_four_banks]', options_for_select([ "yes", "no" ], @home_loan.preference.big_four_banks) %></p>         
+    </div>
+
+    <div class="field">
+        <%= f.label :online_banks %><br>
+        <%= select_tag 'home_loan[preference][online_banks]', options_for_select([ "yes", "no" ], @home_loan.preference.online_banks) %></p>               
+    </div>
+
+    <div class="field">
+        <%= f.label :flexible %><br>
+        <%= select_tag 'home_loan[preference][flexible]', options_for_select([ true, false ], @home_loan.preference.flexible) %></p>               
+    </div>
+
+    <div class="field">
+        <%= f.label :interest_only_period %><br>
+        <%= number_field_tag 'home_loan[preference][interest_only_period]', @home_loan.preference.interest_only_period %></p>         
+    </div>
+
+    <div class="field">
+        <%= f.label :is_restrict %><br>
+        <%= select_tag 'home_loan[preference][is_restrict]', options_for_select([ true, false ], @home_loan.preference.is_restrict) %></p>
+    </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -13,3 +13,6 @@
   * navigate to http://localhost:3000/home_loans 
     or
   * http://localhost:3000/home_loans.json
+
+* Example query on jsonb data column with nesting
+    HomeLoan.data_contains(rate_type: "fixed", preference: { flexible: true })

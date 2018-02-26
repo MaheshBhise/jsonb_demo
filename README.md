@@ -15,4 +15,5 @@
   * http://localhost:3000/home_loans.json
 
 * Example query on jsonb data column with nesting
+   * rails c
    * HomeLoan.data_contains(rate_type: "fixed", preference: { flexible: true })

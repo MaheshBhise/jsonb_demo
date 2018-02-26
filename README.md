@@ -10,5 +10,6 @@
 
 * Run Project instructions
   * Development: rails s
-
-
+  * navigate to http://localhost:3000/home_loans 
+    or
+  * http://localhost:3000/home_loans.json
